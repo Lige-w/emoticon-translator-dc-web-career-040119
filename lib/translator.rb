@@ -14,7 +14,7 @@ end
 
 def get_japanese_emoticon(filepath, emoticon)
   translator = load_library(filepath)
-  translator['get_emoticon'].key(emoticon)
+  translator['get_emoticon'][emoticon]
   binding.pry
 end
 
