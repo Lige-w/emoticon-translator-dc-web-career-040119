@@ -7,7 +7,6 @@ def load_library(filepath)
   translator = {'get_meaning' => {}, 'get_emoticon' => {}}
   emoticons.each do |name, data|
     translator['get_meaning'][data[1]] = name
-    binding.pry
   end
 end
 
