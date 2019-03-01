@@ -14,7 +14,11 @@ end
 
 def get_japanese_emoticon(filepath, emoticon)
   translator = load_library(filepath)
-  translator['get_emoticon'][emoticon]
+  if translator['get_emoticon'].has_key?(emoticon)
+    translator['get_emoticon'][emoticon]
+  else
+    'Sorry, that emoticon was not found'
+  end
 end
 
 def get_english_meaning
