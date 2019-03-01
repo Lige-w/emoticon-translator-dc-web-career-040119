@@ -4,10 +4,10 @@ require 'yaml'
 
 def load_library(filepath)
   emoticons = YAML.load_file(filepath)
-  translator = {}
+  translator = {'get_meaning' => {}, 'get_emoticon' => {}}
   emoticons.each do |name, data|
     binding.pry
-    translator['get_meaning'][]
+    translator['get_meaning'][data[1]] = name
   end
 end
 
