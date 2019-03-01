@@ -6,8 +6,8 @@ def load_library(filepath)
   emoticons = YAML.load_file(filepath)
   translator = {'get_meaning' => {}, 'get_emoticon' => {}}
   emoticons.each do |name, data|
-    binding.pry
     translator['get_meaning'][data[1]] = name
+    binding.pry
   end
 end
 
