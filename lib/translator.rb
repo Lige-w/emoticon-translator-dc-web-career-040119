@@ -13,8 +13,8 @@ def load_library(filepath)
 end
 
 def get_japanese_emoticon(filepath, emoticon)
-  load_library(filepath)
-
+  translator = load_library(filepath)
+  translator['get_emoticon'].key(emoticon)
 end
 
 def get_english_meaning
