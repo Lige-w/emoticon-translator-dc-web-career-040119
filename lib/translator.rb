@@ -7,6 +7,7 @@ def load_library(filepath)
   translator = {'get_meaning' => {}, 'get_emoticon' => {}}
   emoticons.each do |name, data|
     translator['get_meaning'][data[1]] = name
+    translator['get_emoticon'][data[0]] = data[1]
   end
   translator
 end
