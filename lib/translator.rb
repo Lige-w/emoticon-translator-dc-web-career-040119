@@ -8,6 +8,7 @@ def load_library(filepath)
   emoticons.each do |name, data|
     translator['get_meaning'][data[1]] = name
   end
+  translator
 end
 
 def get_japanese_emoticon
